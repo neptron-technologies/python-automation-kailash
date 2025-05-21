@@ -13,7 +13,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 
 # -------------------- CONFIGURATION --------------------
-CHROME_DRIVER_PATH = "D:/Main/Docs/Neptron/Kailash/Automation-Tool/Application-Dev/chromedriver.exe"
+#enter valid path below for chromedriver.exe
+CHROME_DRIVER_PATH = "D:/xxxxxxxx/Application-Dev/chromedriver.exe"
 DOWNLOAD_DIR = os.path.abspath("downloads")
 CSV_FILE = "1000_to_1999_commodities_pending.csv" 
 
@@ -86,7 +87,8 @@ def wait_and_rename_download(hs_code):
 # -------------------- MAIN DOWNLOAD FUNCTION --------------------
 def download_excel_for_hs_code(hs_code):
     """ Download the Excel file for the given HS Code """
-    driver.get("https://tradestat.commerce.gov.in/eidb/ecomcntq.asp")
+    #enter valid url below - https://tradestat.commerce.gov.in/eidb/ecomcntq.asp
+    driver.get("valid-url")
 
     try:
         # Enter HS Code
