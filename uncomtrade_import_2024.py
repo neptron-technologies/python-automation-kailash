@@ -27,8 +27,8 @@ driver = webdriver.Chrome(options=options)
 prefs["safebrowsing.enabled"] = True
 wait = WebDriverWait(driver, 30)
  
-# Step 1: Open the website
-driver.get("https://comtradeplus.un.org/")
+# Step 1: Open the website - enter valid site url - https://comtradeplus.un.org/
+driver.get("valid-url")
  
 # Step 2: Click on Login
 login_btn = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[text()='Login']")))
@@ -38,8 +38,9 @@ time.sleep(2)
 # Step 3: Wait for login form & fill credentials
 email_input = wait.until(EC.visibility_of_element_located((By.ID, "email")))
 password_input = driver.find_element(By.ID, "password")
-email_input.send_keys("sandeeep.patil@gmail.com")
-password_input.send_keys("Admin@123456")
+#enter valid user id and password below
+email_input.send_keys("userid")
+password_input.send_keys("password")
  
 # Function to close modal if present
 # def close_modal_if_present():
