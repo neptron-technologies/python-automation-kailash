@@ -8,7 +8,8 @@ from selenium.webdriver.support import expected_conditions as EC
 # Step 1: Set up Chrome WebDriver
 driver = webdriver.Chrome()
 wait = WebDriverWait(driver, 20)
-driver.get("https://www.skaytechinnoverse.com/SKAYTECH/v1/")
+#enter valid url below for upload path
+driver.get("valid-url")
  
 # Step 2: Log in and navigate to "Upload Excel"
 login_sidebar = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "toggle-login-sidebar")))
